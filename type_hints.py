@@ -23,3 +23,4 @@ if __name__=='__main__':
 from typing import List, Dirt
 
 sample_list: List[int] = [1, 2, 3, 4]
+sample_dict: Dict[string, string] = ['username': 'abcd']
