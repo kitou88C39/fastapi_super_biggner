@@ -11,6 +11,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/contries")
-async def contry():
+@app.get("/contries/{country_name}")
+async def contry(contry_name):
     return {"contry_name": contry_name}
