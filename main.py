@@ -27,3 +27,12 @@ async def japan():
 @app.get("/contries/{country_name}")
 async def country(country_name: str):
     return {"country_name": country_name}
+
+# クエリパラメーター
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/contries/")
+async def country(country_name: str, country_no: int):
+    return {"country_name": country_name}
