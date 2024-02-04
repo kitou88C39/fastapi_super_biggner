@@ -33,9 +33,11 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/contries/")
-async def country(country_name: str, country_no: int):
+@app.get("/contries/{country_name}")
+async def country(country_name: str='japan', city_name: str='tokyo'):
     return {
         "country_name": country_name,
-        "country_no": country_no
+        "city_no": city_name
         }
+
+# パスパラメータ + エリパラメーター
